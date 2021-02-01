@@ -65,7 +65,7 @@ resource "ibm_is_public_gateway" "pubgw-zone3" {
 }
 
 #---------------------------------------------------------
-## Create Webapp in Zone1
+## Create Subnets
 #---------------------------------------------------------
 resource "ibm_is_subnet" "server-subnet-zone1" {
   name            = "${var.vpc-name}-${var.zone1}-server"
@@ -75,9 +75,6 @@ resource "ibm_is_subnet" "server-subnet-zone1" {
   public_gateway  = ibm_is_public_gateway.pubgw-zone1.id
 }
 
-#---------------------------------------------------------
-## Create Webapp in Zone2
-#---------------------------------------------------------
 resource "ibm_is_subnet" "server-subnet-zone2" {
   name            = "${var.vpc-name}-${var.zone2}-server"
   vpc             = ibm_is_vpc.vpc1.id
@@ -85,10 +82,6 @@ resource "ibm_is_subnet" "server-subnet-zone2" {
   ipv4_cidr_block = var.server-subnet-zone-2
   public_gateway  = ibm_is_public_gateway.pubgw-zone2.id
 }
-
-#---------------------------------------------------------
-## Create Webapp in Zone3
-#---------------------------------------------------------
 resource "ibm_is_subnet" "server-subnet-zone3" {
   name            = "${var.vpc-name}-${var.zone3}-server"
   vpc             = ibm_is_vpc.vpc1.id
