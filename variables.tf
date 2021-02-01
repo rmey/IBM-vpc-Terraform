@@ -81,13 +81,13 @@ variable "vpc-address-prefix-3" {
 ## DEFINE subnets for server in each zone
 #---------------------------------------------------------
 variable "server-subnet-zone-1" {
-  default = "172.21.0.0/24"
+  default = "172.21.0.1/24"
 }
 variable "server-subnet-zone-2" {
-  default = "172.21.1.0/24"
+  default = "172.21.0.2/24"
 }
 variable "server-subnet-zone-3" {
-  default = "172.21.2.0/24"
+  default = "172.21.0.3/24"
 }
 
 variable "ibmcloud_timeout" {
