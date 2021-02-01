@@ -46,7 +46,7 @@ resource "ibm_is_vpc_address_prefix" "prefix3" {
 #  name = "${var.vpc-name}-${var.zone1}-pubgw"
 #  vpc  = ibm_is_vpc.vpc1.id
 #  zone = var.zone1
-}
+#}
 #---------------------------------------------------------
 # Get Public Gateway's for Zone 2
 #---------------------------------------------------------
