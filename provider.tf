@@ -5,4 +5,5 @@ provider "ibm" {
   ibmcloud_timeout        = var.ibmcloud_timeout
   generation              = var.ibmcloud_vpc_generation
   region                  = var.ibmcloud_region
+  version =               "1.20.1"
 }

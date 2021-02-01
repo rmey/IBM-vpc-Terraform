@@ -90,6 +90,39 @@ variable "server-subnet-zone-3" {
   default = "172.21.3.0/24"
 }
 
+#---------------------------------------------------------
+## DEFINE subnets for server in each zone
+#---------------------------------------------------------
+variable "server-subnet-zone-1" {
+  default = "172.21.1.0/24"
+}
+variable "server-subnet-zone-2" {
+  default = "172.21.2.0/24"
+}
+variable "server-subnet-zone-3" {
+  default = "172.21.3.0/24"
+}
+
+#---------------------------------------------------------
+## DEFINE variables for ROKS cluster
+#---------------------------------------------------------
+
+variable cluster_name {
+  default = "myrokscluster"
+}
+variable cluster_kube_version {
+  default = "4.5.24_openshift"
+}
+variable cluster_flavor{
+  default = "bx2.4x16"
+}
+variable cluster_worker_count{
+  default = "1"
+}
+variable cluster_cos_instance_name{
+  default = "myrokscluster_cos"
+}
+
 variable "ibmcloud_timeout" {
    default = 300
 }
