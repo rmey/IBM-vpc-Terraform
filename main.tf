@@ -43,7 +43,7 @@ resource "ibm_is_vpc_address_prefix" "prefix3" {
 # Get Public Gateway's for Zone 1
 #---------------------------------------------------------
 resource "ibm_is_public_gateway" "pubgw-zone1" {
-  name = "${var.vpc-name}-${var.zone1}-pubgw"
+  name = "${var.vpc-name}-${var.zone1}-pubgw-1"
   vpc  = ibm_is_vpc.vpc1.id
   zone = var.zone1
 }
@@ -51,7 +51,7 @@ resource "ibm_is_public_gateway" "pubgw-zone1" {
 # Get Public Gateway's for Zone 2
 #---------------------------------------------------------
 resource "ibm_is_public_gateway" "pubgw-zone2" {
-  name = "${var.vpc-name}-${var.zone2}-pubgw"
+  name = "${var.vpc-name}-${var.zone2}-pubgw-2"
   vpc  = ibm_is_vpc.vpc1.id
   zone = var.zone2
 }
@@ -59,7 +59,7 @@ resource "ibm_is_public_gateway" "pubgw-zone2" {
 # Get Public Gateway's for Zone 3
 #---------------------------------------------------------
 resource "ibm_is_public_gateway" "pubgw-zone3" {
-  name = "${var.vpc-name}-${var.zone2}-pubgw"
+  name = "${var.vpc-name}-${var.zone2}-pubgw-3"
   vpc  = ibm_is_vpc.vpc1.id
   zone = var.zone3
 }
