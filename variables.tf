@@ -91,19 +91,6 @@ variable "server-subnet-zone-3" {
 }
 
 #---------------------------------------------------------
-## DEFINE subnets for server in each zone
-#---------------------------------------------------------
-variable "server-subnet-zone-1" {
-  default = "172.21.1.0/24"
-}
-variable "server-subnet-zone-2" {
-  default = "172.21.2.0/24"
-}
-variable "server-subnet-zone-3" {
-  default = "172.21.3.0/24"
-}
-
-#---------------------------------------------------------
 ## DEFINE variables for ROKS cluster
 #---------------------------------------------------------
 
