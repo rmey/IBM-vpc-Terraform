@@ -16,7 +16,7 @@ data "ibm_resource_instance" "cos_instance" {
 #          subnet_id = ibm_is_subnet.server-subnet-zone1.id
 #          name      = var.zone1
 #        }
-  zones {
+#  zones {
 #          subnet_id = ibm_is_subnet.server-subnet-zone2.id
 #          name      = var.zone2
 #        }
