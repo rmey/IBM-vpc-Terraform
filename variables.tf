@@ -106,9 +106,6 @@ variable cluster_flavor{
 variable cluster_worker_count{
   default = "1"
 }
-variable cluster_cos_instance_name{
-  default = "myrokscluster_cos"
-}
 
 variable "ibmcloud_timeout" {
    default = 300
