@@ -16,4 +16,12 @@ resource "ibm_container_vpc_cluster" "cluster" {
           subnet_id = ibm_is_subnet.server-subnet-zone1.id
           name      = var.zone1
         }
+  zones {
+          subnet_id = ibm_is_subnet.server-subnet-zone2.id
+          name      = var.zone2
+        }
+  zones {
+          subnet_id = ibm_is_subnet.server-subnet-zone2.id
+          name      = var.zone2
+        }
 }
