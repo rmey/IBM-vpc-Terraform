@@ -12,7 +12,6 @@ resource "ibm_is_vpc" "vpc1" {
   name                = var.vpc-name
   resource_group      = data.ibm_resource_group.group.id
   address_prefix_management = "manual"
-#  default_network_acl = ibm_is_network_acl.default_all_acl.id
 }
 
 #---------------------------------------------------------
@@ -95,4 +94,17 @@ resource "ibm_is_subnet" "server-subnet-zone3" {
   zone            = var.zone3
   ipv4_cidr_block = var.server-subnet-zone-3
   public_gateway  = ibm_is_public_gateway.pubgw-zone3.id
+}
+
+#---------------------------------------------------------
+## Create Rule in default Security Group for Cluster
+#---------------------------------------------------------
+resource "ibm_is_security_group_rule" "cluster_rule" {
+  group     = ibm_is_vpc.vpc1.default_security_group
+  direction = "inbound"
+  remote    = "0.0.0.0/0"
+  tcp {
+    port_min = 30000
+    port_max = 32767
+  }
 }
