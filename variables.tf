@@ -110,10 +110,6 @@ variable cluster_cos_instance_name{
   default = "myrokscluster_cos"
 }
 
-variable cos_instance_crn{
-  default = "crn:v1:bluemix:public:iam-identity::a/e97a8c01ac694e308ef3ad77957bb960::serviceid:ServiceId-fae3178e-9347-4ddc-8cf4-2d7a03ad6acb"
-}
-
 variable "ibmcloud_timeout" {
    default = 300
 }
