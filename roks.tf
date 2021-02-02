@@ -6,12 +6,12 @@ resource "ibm_container_vpc_cluster" "cluster" {
   worker_count      = var.cluster_worker_count
   cos_instance_crn  = var.cos_instance_crn
   resource_group_id = data.ibm_resource_group.group.id
-  zones = [
-    {
-      subnet_id = "0717-0c0899ce-48ac-4eb6-892d-4e2e1ff8c9478"
-      name      = "us-south-1"
-    }
-  ]
+  #zones = [
+  #  {
+  #    subnet_id = "0717-0c0899ce-48ac-4eb6-892d-4e2e1ff8c9478"
+  #    name      = "us-south-1"
+  #  }
+  #]
 
   #zones = [
       #{
