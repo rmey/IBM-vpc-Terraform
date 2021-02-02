@@ -12,7 +12,7 @@ resource "ibm_container_vpc_cluster" "cluster" {
   worker_count      = var.cluster_worker_count
   cos_instance_crn  = data.ibm_resource_instance.cos_instance.id
   resource_group_id = data.ibm_resource_group.group.id
-  zones {
+  zones [
          {
           subnet_id = ibm_is_subnet.server-subnet-zone1.id
           name      = var.zone1
@@ -21,5 +21,5 @@ resource "ibm_container_vpc_cluster" "cluster" {
           subnet_id = ibm_is_subnet.server-subnet-zone2.id
           name      = var.zone2
          }
-        }
+        ]
 }

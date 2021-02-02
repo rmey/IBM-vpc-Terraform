@@ -104,7 +104,7 @@ variable cluster_flavor{
   default = "bx2.4x16"
 }
 variable cluster_worker_count{
-  default = "1"
+  default = "3"
 }
 
 variable "ibmcloud_timeout" {
